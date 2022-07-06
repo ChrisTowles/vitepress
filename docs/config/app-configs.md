@@ -55,6 +55,25 @@ export default {
 }
 ```
 
+## head
+
+- Type: `[string, Record<string, string>]` or `[string, Record<string, string>, string]`
+- Default: `none`
+
+This will render entries in the `<head>` tag in the page HTML.
+
+```ts
+export default {
+ head: [
+    ['link', { rel: 'icon', href: '/logo.svg', type: 'image/svg+xml' }],
+    ['meta', { name: 'author', content: author }],
+    ['script', {async: 'async', src: `https://external-script-addresss`} ],
+    ['script', {},  `
+       console.log('global script')
+    `]
+}
+```
+
 ## ignoreDeadLinks
 
 - Type: `boolean`
